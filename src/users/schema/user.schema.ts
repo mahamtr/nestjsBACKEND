@@ -4,10 +4,10 @@ export type UserDocument  = User & Document;
 
 @Schema()
 export class User {
-    @Prop()
+    @Prop({unique:true})
     userId: string;
 
-    @Prop()
+    @Prop({unique: true})
     password: string;
 
     @Prop()
